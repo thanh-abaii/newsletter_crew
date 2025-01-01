@@ -1,0 +1,21 @@
+[project]
+name = "newsletter_crew"
+version = "0.1.0"
+description = "newsletter-crew using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.86.0,<1.0.0",
+    "exa_py>=1.7.1"
+]
+
+[project.scripts]
+newsletter_crew = "newsletter_crew.main:run"
+run_crew = "newsletter_crew.main:run"
+train = "newsletter_crew.main:train"
+replay = "newsletter_crew.main:replay"
+test = "newsletter_crew.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
